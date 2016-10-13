@@ -1,0 +1,53 @@
+<!--
+File name: header.ejs
+Author: Lucas Berte Schoenardie
+Web site name: Lucas' Portfolio
+File description: Shared header for every view in the website. Contains links to css and navigation
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Start of page head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= title %></title>
+
+  <!-- LINKS TO BOOTSTRAP FILES -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+
+  <!-- custom css -->
+  <style media="screen">
+
+    .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    }
+
+    .navbar .navbar-collapse {
+      text-align: center;
+    }
+
+    .navbar-inverse  {
+      border-radius: 0 !important;
+    }
+
+  </style>
+
+</head>
+<!-- End of page head -->
+
+<!-- Start of page body -->
+<body>
+  <!-- Start of page navigation bar -->
+  <nav class="navbar navbar-inverse nav-top" role="navigation">
+    <div class="collapse navbar-collapse ">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/games">Games</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of page navigation bar -->

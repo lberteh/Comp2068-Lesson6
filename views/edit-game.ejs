@@ -1,0 +1,29 @@
+<% include partials/header.ejs %>
+
+  <div class="container">
+
+
+    <h1><%= title %></h1>
+
+    <form method="post">
+
+          <div class="form-group">
+            <input type="text" class="form-control" name="title" value="<%= game.title %>"  placeholder="Enter game title" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="publisher" value="<%= game.publisher %>"  placeholder="Enter game publisher">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="genre" value="<%= game.genre %>"  placeholder="Enter game genre" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="year" value="<%= game.year %>"  placeholder="Enter release year" required type="number" min="1970">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+
+  </div>
+
+<% include partials/footer.ejs %>

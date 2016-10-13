@@ -1,0 +1,34 @@
+<% include partials/header.ejs %>
+
+  <div class="container">
+
+
+
+    <h1><%= title %></h1>
+
+    <a href="/games/add"><button class="btn btn-primary" type="button" name="button">Add a Game</button></a>
+
+    <table class="table table-striped" style="margin-top:15px">
+      <tr>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <% for (var i=0; i < games.length; i++ ) { %>
+      <tr>
+        <td><%= games[i].title %></td>
+        <td><%= games[i].publisher %></td>
+        <td><%= games[i].genre %></td>
+        <td><%= games[i].year %></td>
+        <td><a href="/games/<%= games[i]._id %>"><button type="button" class="btn btn-primary" name="button" >Edit</button></a></td>
+        <td><a class="confirmation" href="/games/delete/<%= games[i]._id %>"><button type="button" class="btn btn-danger" name="button" >X</button></a></td>
+      </tr>
+      <% } %>
+    </table>
+
+  </div>
+
+<% include partials/footer.ejs %>
